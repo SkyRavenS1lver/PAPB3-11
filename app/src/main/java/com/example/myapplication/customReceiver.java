@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 public class customReceiver extends BroadcastReceiver {
+    private final static String ACTION_CUSTOM_BROADCAST = "action-custom-broadcast";
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -21,7 +22,7 @@ public class customReceiver extends BroadcastReceiver {
             case Intent.ACTION_POWER_DISCONNECTED:
                 toastMessage = "power disconnected";
                 break;
-            case "action-custom-broadcast":
+            case ACTION_CUSTOM_BROADCAST:
                 toastMessage = "HALO";
                 break;
         }
